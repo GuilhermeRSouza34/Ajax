@@ -21,16 +21,21 @@ $(document).ready(function() {
         $(botao).find('span').removeClass('d-none');
 
 
-        $.ajax(endpoint).done(function(resposta) {
-            const logradouro = resposta.logradouro;
-            const bairro = resposta.bairro;
-            const cidade = resposta.cidade;
-            const estado = resposta.uf;
-            const endereco = `${logradouro}, - ${bairro} - ${cidade} - ${estado}`;
-            $('#endereco').val(endereco);
+    //     $.ajax(endpoint).done(function(resposta) {
+    //         const logradouro = resposta.logradouro;
+    //         const bairro = resposta.bairro;
+    //         const cidade = resposta.cidade;
+    //         const estado = resposta.uf;
+    //         const endereco = `${logradouro}, - ${bairro} - ${cidade} - ${estado}`;
+    //         $('#endereco').val(endereco);
 
-            $(botao).find('i').removeClass('d-none');
-            $(botao).find('span').addClass('d-none');
+    //         $(botao).find('i').removeClass('d-none');
+    //         $(botao).find('span').addClass('d-none');
+    //     })
+
+
+        fetch(endpoint).then(function(resposta) {
+            console.log(resposta)
         })
     })
 })
