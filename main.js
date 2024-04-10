@@ -12,8 +12,11 @@
 
 $(document).ready(function() {
     $('#btn-buscar-cep').click(function() {
-        const cep = $('cep').val();
+        const cep = $('#cep').val();
         const endpoint = `https://viacep.com.br/ws/${cep}/json`;
+        $(this).find('i').addClass('d-none');
+        $(this).find('span').removeClass('d-none');
+
 
         $.ajax(endpoint).done(function(resposta) {
             const logradouro = resposta.logradouro;
