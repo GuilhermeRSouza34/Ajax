@@ -45,6 +45,8 @@ $(document).ready(function() {
                  const endereco = `${logradouro}, - ${bairro} - ${cidade} - ${estado}`;
                  $('#endereco').val(endereco)
         })
-
+        .catch(function(erro) {
+            alert("Ocorreu um erro ao buscar o endereço, tente novamente mais tarde.")
+        })
     })
 })
