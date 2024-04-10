@@ -38,12 +38,13 @@ $(document).ready(function() {
             return resposta.json()
         })
         .then(function(json) {
-            const logradouro = resposta.logradouro;
-                 const bairro = resposta.bairro;
-                 const cidade = resposta.cidade;
-                 const estado = resposta.uf;
+            const logradouro = json.logradouro;
+                 const bairro = json.bairro;
+                 const cidade = json.cidade;
+                 const estado = json.uf;
                  const endereco = `${logradouro}, - ${bairro} - ${cidade} - ${estado}`;
-                 $('#endereco').val(endereco);
+                 $('#endereco').val(endereco)
         })
+
     })
 })
