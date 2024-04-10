@@ -25,6 +25,9 @@ $(document).ready(function() {
             const estado = resposta.uf;
             const endereco = `${logradouro}, - ${bairro} - ${cidade} - ${estado}`;
             $('#endereco').val(endereco);
+
+            $(this).find('i').removeClass('d-none');
+            $(this).find('span').addClass('d-none');
         })
     })
 })
