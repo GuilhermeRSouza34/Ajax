@@ -48,5 +48,11 @@ $(document).ready(function() {
         .catch(function(erro) {
             alert("Ocorreu um erro ao buscar o endereço, tente novamente mais tarde.")
         })
+        .finally(function(){
+            setTimeout(function() {
+                $(botao).find('i').removeClass('d-none');
+                $(botao).find('span').addClass('d-none');
+            }, 4000);
+        })
     })
 })
