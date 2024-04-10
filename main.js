@@ -16,7 +16,11 @@ $(document).ready(function () {
         const endpoint = `https://viacep.com.br/ws/${cep}/json`;
 
         $.ajax(endpoint).done(function(resposta) {
-            console.log(resposta);
+            const logradouro = resposta.logradouro;
+            const bairro = resposta.bairro;
+            const cidade = resposta.cidade;
+            const estado = resposta.uf;
+            const endereco = `${logradouro}, - ${bairro} - ${cidade} - ${estado}`;
         })
     })
 })
