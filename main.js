@@ -10,3 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 
+$(document).ready(function () {
+    $('#btn-buscar-cep').click(function() {
+        const cep = $('cep').val();
+        const endpoint = `https://viacep.com.br/ws/${cep}/json`;
+    })
+})
