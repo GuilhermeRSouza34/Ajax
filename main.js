@@ -14,8 +14,9 @@ $(document).ready(function() {
     $('#btn-buscar-cep').click(function() {
         const cep = $('#cep').val();
         const endpoint = `https://viacep.com.br/ws/${cep}/json`;
-        $(this).find('i').addClass('d-none');
-        $(this).find('span').removeClass('d-none');
+        const botao = $(this);
+        $(botao).find('i').addClass('d-none');
+        $(botao).find('span').removeClass('d-none');
 
 
         $.ajax(endpoint).done(function(resposta) {
@@ -26,8 +27,8 @@ $(document).ready(function() {
             const endereco = `${logradouro}, - ${bairro} - ${cidade} - ${estado}`;
             $('#endereco').val(endereco);
 
-            $(this).find('i').removeClass('d-none');
-            $(this).find('span').addClass('d-none');
+            $(botao).find('i').removeClass('d-none');
+            $(botao).find('span').addClass('d-none');
         })
     })
 })
