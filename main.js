@@ -35,7 +35,15 @@ $(document).ready(function() {
 
 
         fetch(endpoint).then(function(resposta) {
-            console.log(resposta)
+            return resposta.json()
+        })
+        .then(function(json) {
+            const logradouro = resposta.logradouro;
+                 const bairro = resposta.bairro;
+                 const cidade = resposta.cidade;
+                 const estado = resposta.uf;
+                 const endereco = `${logradouro}, - ${bairro} - ${cidade} - ${estado}`;
+                 $('#endereco').val(endereco);
         })
     })
 })
