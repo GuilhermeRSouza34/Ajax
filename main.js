@@ -52,7 +52,7 @@ $(document).ready(function() {
             setTimeout(function() {
                 $(botao).find('i').removeClass('d-none');
                 $(botao).find('span').addClass('d-none');
-            }, 4000);
+            }, 1000);
         })
     })
 })
