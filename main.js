@@ -59,6 +59,8 @@ $(document).ready(function() {
     })
 
     $('#formulario-pedido').submit(function() {
+        evento.preventDefault();
+
         if ($('nome').val().length == 0){
             throw new error('digite o Nome');
         }
