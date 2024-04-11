@@ -9,6 +9,8 @@
 //    })
 //})
 
+const { error } = require("jquery");
+
 
 $(document).ready(function() {
     $('#cep').mask('00000-000');
@@ -54,5 +56,11 @@ $(document).ready(function() {
                 $(botao).find('span').addClass('d-none');
             }, 1000);
         })
+    })
+
+    $('#formulario-pedido').submit(function() {
+        if ($('nome').val().length == 0){
+            new error('digite o Nome');
+        }
     })
 })
