@@ -60,7 +60,7 @@ $(document).ready(function() {
 
     $('#formulario-pedido').submit(function() {
         if ($('nome').val().length == 0){
-            new error('digite o Nome');
+            throw new error('digite o Nome');
         }
     })
 })
